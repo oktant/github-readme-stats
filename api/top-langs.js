@@ -32,6 +32,7 @@ export default async (req, res) => {
     border_color,
     disable_animations,
     hide_progress,
+    role,
   } = req.query;
   res.setHeader("Content-Type", "image/svg+xml");
 
@@ -67,6 +68,7 @@ export default async (req, res) => {
       parseArray(exclude_repo),
       size_weight,
       count_weight,
+      parseArray(role),
     );
 
     let cacheSeconds = parseInt(
